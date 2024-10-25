@@ -1,4 +1,4 @@
-# Tic Tic Toe
+# Tic Tac Toe
 ## Description
 A Java Swing based project for Tic Tac Toe
 
@@ -6,7 +6,7 @@ A Java Swing based project for Tic Tac Toe
 To run the programme, following instructions should be followed:
 1. Clone the repository to the desired path.
 
-2. Open your desired IDE(Integrated Development Environment) and download all the needed java extensions required to run a Java programme.
+2. Open your desired **IDE**(Integrated Development Environment) and ensure all the needed *Java extensions* required to run a Java programme.
 
 3. Open the downloaded folder.
 
