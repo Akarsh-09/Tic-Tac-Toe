@@ -58,6 +58,8 @@ public class Project{
 
     JCheckBox box00, box01, box02, box10, box11, box12, box20, box21, box22;
 
+    JButton Restart;
+
     JLabel Result;
 
     ImageIcon img1 = new ImageIcon("BluePanel.jpg");
@@ -140,8 +142,11 @@ public class Project{
         box22.setIcon(img1);
         box22.setBounds(284, 284, 136, 136);
 
+        Restart = new JButton("Restart");
+        Restart.setBounds(400, 550, 100, 35);
+
         Result = new JLabel();
-        Result.setBounds(90, 550, 400, 75);
+        Result.setBounds(90, 550, 280, 75);
 
         box00.setDisabledIcon(img1);
         box01.setDisabledIcon(img1);
@@ -576,6 +581,42 @@ public class Project{
             }
         });
 
+        Restart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == Restart)
+                {
+                    a = 0;
+                    for(int i = 0; i < 3; i++)
+                        for(int j = 0; j < 3; j++)
+                            matrix[i][j] = -1;
+                            
+                    box00.setEnabled(true);
+                    box01.setEnabled(true);
+                    box02.setEnabled(true);
+                    box10.setEnabled(true);
+                    box11.setEnabled(true);
+                    box12.setEnabled(true);
+                    box20.setEnabled(true);
+                    box21.setEnabled(true);
+                    box22.setEnabled(true);
+
+                    box00.setSelected(false);
+                    box01.setSelected(false);
+                    box02.setSelected(false);
+                    box10.setSelected(false);
+                    box11.setSelected(false);
+                    box12.setSelected(false);
+                    box20.setSelected(false);
+                    box21.setSelected(false);
+                    box22.setSelected(false);
+
+                    Result.setText("");
+
+                }
+            }
+        });
+
         base.add(box00);
         base.add(box01);
         base.add(box02);
@@ -589,6 +630,7 @@ public class Project{
         base.add(c2);
         base.add(r1);
         base.add(r2);
+        Panel.add(Restart);
         Panel.add(Result);
         Panel.add(base);
         frame.add(Panel);
@@ -603,6 +645,10 @@ public class Project{
     }
 
     public static void main(String[] args) {
+        // while(if)
+        // {
+
+        // }
         Project p = new Project();
     }
 }
