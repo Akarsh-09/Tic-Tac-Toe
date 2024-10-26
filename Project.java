@@ -2,10 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Project extends Frame{
+public class Project {
 
     Frame frame;
     JPanel Panel;
+    JPanel base;
+    JPanel c1, c2, r1, r2;
 
     int x, y, size = 3;
 
@@ -119,6 +121,27 @@ public class Project extends Frame{
                 box[i][j].setBounds(142 * j, 142 * i, 136, 136);
             }
 
+        base = new JPanel();
+        base.setBackground(new Color(0xB7DEFD));
+        base.setBounds(90, 80, 420, 420);
+        base.setLayout(null);
+
+        c1 = new JPanel();
+        c1.setBackground(new Color(0x000000));
+        c1.setBounds(136, 0, 6, 420);
+
+        c2 = new JPanel();
+        c2.setBackground(new Color(0x000000));
+        c2.setBounds(278, 0, 6, 420);
+
+        r1 = new JPanel();
+        r1.setBackground(new Color(0x000000));
+        r1.setBounds(0, 136, 420, 6);
+
+        r2 = new JPanel();
+        r2.setBackground(new Color(0x000000));
+        r2.setBounds(0, 278, 420, 6);
+
         Restart = new JButton("Restart");
         Restart.setBounds(400, 550, 100, 35);
 
@@ -166,7 +189,12 @@ public class Project extends Frame{
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
                 base.add(box[i][j]);
-            
+
+        base.add(c1);
+        base.add(c2);
+        base.add(r1);
+        base.add(r2);
+
         Panel.add(Restart);
         Panel.add(Result);
         Panel.add(base);
