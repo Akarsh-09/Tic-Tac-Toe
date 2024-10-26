@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Project{
+public class Project {
 
     Frame frame;
     JPanel Panel;
@@ -163,7 +163,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box00.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -182,8 +182,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box00.setEnabled(false);
                         box00.setDisabledIcon(img3);
@@ -210,7 +209,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box01.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -229,8 +228,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box01.setEnabled(false);
                         box01.setDisabledIcon(img3);
@@ -257,7 +255,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box02.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -276,8 +274,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box02.setEnabled(false);
                         box02.setDisabledIcon(img3);
@@ -304,7 +301,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box10.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -323,8 +320,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box10.setEnabled(false);
                         box10.setDisabledIcon(img3);
@@ -351,7 +347,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box11.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -370,8 +366,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box11.setEnabled(false);
                         box11.setDisabledIcon(img3);
@@ -398,7 +393,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box12.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -417,8 +412,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box12.setEnabled(false);
                         box12.setDisabledIcon(img3);
@@ -445,7 +439,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box20.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -464,8 +458,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box20.setEnabled(false);
                         box20.setDisabledIcon(img3);
@@ -492,7 +485,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box21.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -511,8 +504,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box21.setEnabled(false);
                         box21.setDisabledIcon(img3);
@@ -539,7 +531,7 @@ public class Project{
             public void actionPerformed(ActionEvent e) {
                 if (box22.isSelected()) {
                     a++;
-                    if(a == 9)
+                    if (a == 9)
                         Result.setText("Draw");
                     if (a % 2 == 1) // Cross
                     {
@@ -558,8 +550,7 @@ public class Project{
                             box21.setEnabled(false);
                             box22.setEnabled(false);
                         }
-                    } 
-                    else // Circle
+                    } else // Circle
                     {
                         box22.setEnabled(false);
                         box22.setDisabledIcon(img3);
@@ -584,13 +575,12 @@ public class Project{
         Restart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == Restart)
-                {
+                if (e.getSource() == Restart) {
                     a = 0;
-                    for(int i = 0; i < 3; i++)
-                        for(int j = 0; j < 3; j++)
+                    for (int i = 0; i < 3; i++)
+                        for (int j = 0; j < 3; j++)
                             matrix[i][j] = -1;
-                            
+
                     box00.setEnabled(true);
                     box01.setEnabled(true);
                     box02.setEnabled(true);
@@ -610,6 +600,16 @@ public class Project{
                     box20.setSelected(false);
                     box21.setSelected(false);
                     box22.setSelected(false);
+
+                    box00.setDisabledIcon(img1);
+                    box01.setDisabledIcon(img1);
+                    box02.setDisabledIcon(img1);
+                    box10.setDisabledIcon(img1);
+                    box11.setDisabledIcon(img1);
+                    box12.setDisabledIcon(img1);
+                    box20.setDisabledIcon(img1);
+                    box21.setDisabledIcon(img1);
+                    box22.setDisabledIcon(img1);
 
                     Result.setText("");
 
@@ -645,10 +645,6 @@ public class Project{
     }
 
     public static void main(String[] args) {
-        // while(if)
-        // {
-
-        // }
-        Project p = new Project();
+        new Project();
     }
 }
